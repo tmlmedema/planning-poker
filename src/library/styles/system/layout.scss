@@ -1,0 +1,65 @@
+@import "../global/colors";
+
+.template {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background: {
+        image: radial-gradient($gray 20%, transparent 20%),
+            radial-gradient($gray 20%, transparent 20%);
+        color: $black;
+        position: 0 0, 5px 5px;
+        size: 10px 10px;
+    }
+
+    .main {
+        display: flex;
+        flex-grow: 2;
+        justify-content: center;
+        .appWrapper {
+            display: flex;
+            width: 90%;
+            height: 100%;
+            margin-top: 2rem;
+
+            &.white {
+                background: $white;
+            }
+
+            .container,
+            .container-fluid {
+                .row {
+                    padding: {
+                        top: 0.5rem;
+                        bottom: 0.5rem;
+                    }
+
+                    .col {
+                        padding: {
+                            right: 0.5rem;
+                            left: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.authentication {
+        justify-content: center;
+    }
+
+    &.application {
+        justify-content: flex-start;
+    }
+
+    &.poker {
+        background: $blue;
+
+        .appWrapper {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 0;
+        }
+    }
+}

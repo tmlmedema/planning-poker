@@ -1,0 +1,36 @@
+/**
+ *
+ * Modal styles
+ *
+ */
+
+ @import '../../global/global';
+
+.modal{
+    display: flex; width: 100vw; height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; top: 0; left: 0;
+
+    .modal-viewport{
+        display: block;
+        padding: 1rem 1rem 1.5rem 1rem;
+        background: $white;
+        box-sizing: border-box;
+
+        &.small{
+            width: 25vw;
+        }
+
+        &.medium{
+            width: 50vw;
+        }
+
+        &.large{
+            width: 75vw;
+        }
+
+    }
+
+}

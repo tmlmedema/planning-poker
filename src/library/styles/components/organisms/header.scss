@@ -1,0 +1,25 @@
+/**
+ *
+ * Header styles
+ *
+ */
+
+@import "../../global/global";
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0.9375rem;
+    background: $white;
+    border-bottom: 1px solid $blue;
+
+    h1 {
+        color: $blue;
+        @include font-family-alt;
+        font-size: 2rem;
+        line-height: 0;
+        margin-bottom: 0;
+    }
+}

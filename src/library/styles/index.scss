@@ -1,0 +1,23 @@
+/**
+ *
+ * Root SCSS file
+ *
+ */
+
+@import "../../../node_modules/reset-css/sass/_reset";
+@import "global/global";
+@import "system/system";
+
+body,
+html {
+    @include hundo-percent;
+    @include font-family;
+    color: $gray;
+    margin: 0;
+    padding: 0;
+    background: $blue;
+}
+
+#root {
+    @include hundo-percent;
+}

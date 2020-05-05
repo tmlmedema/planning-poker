@@ -1,0 +1,41 @@
+/**
+ *
+ * Header styles
+ *
+ */
+
+@import "../../global/global";
+
+.poker {
+    .title {
+        display: flex;
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            @include font-family-alt;
+            font-size: 7rem;
+            text-align: center;
+            color: $blue;
+            margin-bottom: 4rem;
+            -webkit-text-stroke: 2px $white;
+        }
+
+        .selection {
+            display: flex;
+            width: 25vw;
+            flex-direction: row;
+            justify-content: center;
+
+            button {
+                margin: {
+                    right: 0.5rem;
+                    left: 0.5rem;
+                }
+            }
+        }
+    }
+}
