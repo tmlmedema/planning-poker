@@ -29,15 +29,13 @@
                 size: 1rem;
             }
 
-            padding: 1rem 0.5rem;
+            padding: 1rem 0;
             border: none;
+            border-bottom: 2px solid $lightgray;
             background: $white;
 
             &:focus {
-                outline: {
-                    color: $blue;
-                    offset: -2px;
-                }
+                outline: 0;
             }
         }
 
@@ -45,13 +43,17 @@
             display: block;
             height: 100%;
             position: absolute;
-            bottom: -47px;
+            bottom: -97%;
             left: 0;
             z-index: 10;
             font-size: 1rem;
-            padding: 0 0 0 0.5rem;
+            padding: 0;
             color: $blue;
             background: $blue;
+
+            &.error {
+                background: $red;
+            }
         }
     }
 }

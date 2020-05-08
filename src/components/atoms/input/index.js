@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const Input = ({ help, label, name, onHandleChange, placeholder, type, value }) => {
+const Input = ({ classes, help, label, name, onHandleChange, placeholder, type, value }) => {
 
     const describedBy = help ? `${name}Help` : `${name}Label`;
 
     const onUpdateInput = (event) => onHandleChange(event.target);
 
     return (
-        <div className='form-element'>
+        <div className={`form-element ${classes}`}>
             {
                 label && <label id={`${name}Label`} htmlFor={name}>{label}</label>
             }

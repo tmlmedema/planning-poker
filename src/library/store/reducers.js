@@ -5,10 +5,10 @@
  */
 
 import { combineReducers } from 'redux';
-import ToDoReducer from './todo/reducers';
+import UIReducer from './ui/reducers';
 
 export const combinedReducers = combineReducers({
-    todo: ToDoReducer
+    ui: UIReducer
 })
 
 export default combinedReducers;

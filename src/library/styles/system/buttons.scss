@@ -8,18 +8,13 @@
         size: 1.25rem;
         weight: 900;
     }
-    color: $white;
+    color: $blue;
     cursor: pointer;
     background: $green;
-    border-color: $green;
+    border: 2px solid $white;
     transition: opacity 1s ease-in-out;
-
-    &:hover {
-        opacity: 0.75;
-    }
 
     &:focus {
         outline: none;
-        opacity: 0.75;
     }
 }

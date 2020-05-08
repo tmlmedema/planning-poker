@@ -4,33 +4,74 @@
  *
  */
 
- @import '../../global/global';
+@import "../../global/global";
 
-.modal{
-    display: flex; width: 100vw; height: 100vh;
+.modal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute; top: 0; left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.75);
+    opacity: 0;
+    transition: opacity 600ms ease-in;
 
-    .modal-viewport{
+    &.active {
+        opacity: 1;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font: {
+            family: $fontFamily;
+            size: 1.25rem;
+            weight: 700;
+        }
+        color: $gray;
+        line-height: 1;
+        margin: 0;
+        padding: 18px 20px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .modal-viewport {
         display: block;
         padding: 1rem 1rem 1.5rem 1rem;
         background: $white;
         box-sizing: border-box;
+        box-shadow: 1px 1px 10px 0px $lightgray;
 
-        &.small{
+        &.small {
             width: 25vw;
         }
 
-        &.medium{
+        &.medium {
             width: 50vw;
         }
 
-        &.large{
+        &.large {
             width: 75vw;
         }
 
+        h1 {
+            color: $gray;
+            font: {
+                family: $fontFamily;
+                weight: 700;
+            }
+            text-align: center;
+        }
     }
-
 }
