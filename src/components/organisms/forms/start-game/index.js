@@ -21,6 +21,7 @@ class StartGame extends Component {
                     name='name'
                     onHandleChange={this.onHandleChange}
                     placeholder='Your name'
+                    value={name}
                 />
                 <Input
                     classes='margin-bottom-sm'
