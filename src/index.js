@@ -1,11 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { StrictMode } from 'react';
+import { render } from 'react-dom';
 import Application from './application';
 import * as serviceWorker from './serviceWorker';
 import 'library/styles/index.scss';
 
-ReactDOM.render(
-    <Application />,
+render(
+    <StrictMode>
+        <Application />
+    </StrictMode>,
     document.getElementById('root')
 );
 
