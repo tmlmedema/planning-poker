@@ -18,7 +18,8 @@
     left: 0;
     background: rgba(255, 255, 255, 0.75);
     opacity: 0;
-    transition: opacity 600ms ease-in;
+    transition: opacity 5s ease-in;
+    transition-delay: 1s;
 
     &.active {
         opacity: 1;
@@ -28,11 +29,13 @@
         position: absolute;
         top: 0px;
         right: 0px;
+
         font: {
             family: $fontFamily;
             size: 1.25rem;
             weight: 700;
         }
+
         color: $gray;
         line-height: 1;
         margin: 0;
@@ -67,10 +70,12 @@
 
         h1 {
             color: $gray;
+
             font: {
                 family: $fontFamily;
                 weight: 700;
             }
+
             text-align: center;
         }
     }

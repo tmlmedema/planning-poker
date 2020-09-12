@@ -12,10 +12,12 @@ class Modal extends Component {
 
     componentDidMount() {
         const { active } = this.state;
-        this.setState(previousState => ({
-            ...previousState,
-            active: !active
-        }));
+        if (!active) {
+            this.setState(previousState => ({
+                ...previousState,
+                active: !active
+            }));
+        }
     }
 
     render() {
