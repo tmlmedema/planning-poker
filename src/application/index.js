@@ -8,17 +8,23 @@ import { store } from 'library/store';
 // Amplify.configure(awsconfig);
 
 const pageMapping = {
-    start: lazy(() => import('../components/scenes/start'))
+    start: lazy( () => import('../components/pages/start') ),
+    game: lazy( () => import('../components/pages/game') ),
+    results: lazy( () => import('../components/pages/results') )
 };
 
-const Application = (props) => {
+const Application = ( props ) => {
+
+    const { start, game, results } = pageMapping;
 
     return (
-        <Provider store={store}>
-            <Suspense fallback={<h1>Loading...</h1>}>
+        <Provider store={ store }>
+            <Suspense fallback={ <h1>Loading...</h1> }>
                 <Router>
                     <Switch>
-                        <Route exact path='/' component={pageMapping.start} />
+                        <Route exact path='/' component={ start } />
+                        <Route exact path='/:gameId' component={ game } />
+                        <Route exact path='/:gameId/results' component={ results } />
                     </Switch>
                 </Router>
             </Suspense>

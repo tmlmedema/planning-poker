@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const Input = ({ classes, help, label, name, onHandleChange, placeholder, type, value }) => {
+const Input = ({ classes, help, label, name, onHandleChange, value, ...otherProps }) => {
 
-    const describedBy = help ? `${name}Help` : `${name}Label`;
+    const describedBy = help ? `${name} Help` : `${name} Label`;
 
-    const onUpdateInput = (event) => onHandleChange(event.target);
+    const onUpdateInput = event => onHandleChange(event.target);
 
     return (
         <div className={`form-element ${classes}`}>
@@ -17,12 +17,11 @@ const Input = ({ classes, help, label, name, onHandleChange, placeholder, type, 
                     aria-describedby={describedBy}
                     id={name}
                     onChange={onUpdateInput}
-                    placeholder={placeholder}
                     value={value}
-                    type={type}
+                    { ...otherProps }
                 />
                 {
-                    value !== '' ? <div className='underline'>{value}</div> : ''
+                    value !== '' ? <div className='underline'>{value}  </div> : ''
                 }
             </div>
             {

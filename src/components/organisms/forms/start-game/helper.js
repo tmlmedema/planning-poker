@@ -5,7 +5,6 @@
  */
 
 export const initialState = {
-    gameId: '',
     email: '',
     name: ''
 };

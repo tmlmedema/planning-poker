@@ -2,10 +2,10 @@
 
 .button {
     width: 100%;
-    padding: 1rem;
+    padding: .5rem 0rem;
     @include font-family;
     font: {
-        size: 1.25rem;
+        size: 1rem;
         weight: 900;
     }
     color: $blue;

@@ -50,7 +50,7 @@
     }
 
     .modal-viewport {
-        display: block;
+        display: block; width: 45vw;
         padding: 1rem 1rem 1.5rem 1rem;
         background: $white;
         box-sizing: border-box;
@@ -61,11 +61,11 @@
         }
 
         &.medium {
-            width: 50vw;
+            width: 35vw;
         }
 
         &.large {
-            width: 75vw;
+            width: 45vw;
         }
 
         h1 {

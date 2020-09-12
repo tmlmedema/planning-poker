@@ -1,19 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from 'components/organisms/header';
 
-const display = false;
-
-export const Poker = ({ children, classes, background }) => {
-
+const PokerTemplate = ({ children, classes, background }) => {
     return (
         <div className={`template poker ${classes}`}>
-            {
-                display &&
-                <Header>
-                    <h1>Planning Poker</h1>
-                </Header>
-            }
             <main className='main'>
                 <div className={`appWrapper ${background}`}>
                     {children}
@@ -21,16 +11,17 @@ export const Poker = ({ children, classes, background }) => {
             </main>
         </div>
     );
-
 };
 
-Poker.propTypes = {
+PokerTemplate.propTypes = {
     background: PropTypes.string,
     classes: PropTypes.string
 };
 
-Poker.defaultProps = {
+PokerTemplate.defaultProps = {
     background: '',
     classes: '',
     children: <h1>Poker template</h1>
 };
+
+export default PokerTemplate;
